@@ -9,113 +9,103 @@
 html,
 body {
     height: 100%;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body {
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
     background-image: url("../images/1.gif");
 }
 
-.signboard,
-.page-content,
-.page-footer {
-    border: 1px solid #6a4101;
-    border-top: none;
-    border-bottom: none;
+.grid {
+    width: 717px;
+    margin: 0 auto;
 }
 
 a {
     text-decoration: none;
-    font-size: 12px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-/* -------------------------------------------------- Header */
+/* ------------------------------------------------------ Header */
 
 .header {
     background-color: black;
     color: white;
-    font-size: 10px;
     border-bottom: 1px solid #6a4101;
-}
 
-.logo {
-    display: inline-block;
-}
-
-form {
-    float: right;
-    padding: 7px 7px 0 0;
-
-    &::after {
-        content: '';
+    .logo img {
         display: block;
-        clear: both;
+    }
+
+    form {
+        float: right;
+        margin: 7px 7px 0 0;
+    }
+
+    label {
+        margin-right: 20px;
+    }
+
+    select {
+        font-size: 12px;
     }
 }
 
-label {
-    padding-right: 20px;
-}
-
-select {
-    font-size: 12px;
-}
-
-/*---------------------------------------------------- Page */
+/*------------------------------------------------------ Page */
 
 .page {
-    width: 717px;
-    margin: 0 auto;
-    padding: 3px 0 50px 0;
+    padding: 0 0 50px 0;
     position: relative;
     min-height: 100%;
 }
 
-/*---------------- Page-header */
+/* ------------------------------------------------------ Page header */
 
 .page-header {
-    font-family: "Times New Roman", Times, serif;
     color: #ffffff;
-}
+    padding-bottom: 125px;
+    background: url("../images/5.gif") no-repeat left bottom;
 
-.nav-1 {
-    float: right;
-    margin-bottom: 7px;
+    .nav {
+        text-align: right;
+        padding: 6px 0 11px 0;
 
-    a {
-        padding-left: 15px;
-        color: #ffffff;
+        a {
+            margin-left: 15px;
+            color: #ffffff;
+        }
+
+        .truck {
+            background: url("../images/4.gif") no-repeat;
+            padding: 0 0 5px 25px;
+        }
     }
-
-    .truck {
-        background: url("../images/4.gif") no-repeat;
-        padding-left: 25px;
-        padding-bottom: 5px;
-    }
 }
 
-.signboard {
-    height: 125px;
-    background: url("../images/5.gif") no-repeat;
-    clear: both;
-}
+/* ------------------------------------------------------ Content */
 
-/*---------------- Page-content */
-
-.page-content {
-    font-family: Tahoma, Arial, sans-serif;
-    color: #ffffff;
+.content {
     background: #000000;
-    padding: 8px 17px;
-    min-height: 798px;
+    padding: 8px 17px 75px;
+    min-height: 600px;
+    position: relative;
+    border: 1px solid #6a4101;
+    border-top: none;
 }
 
-.nav-2 {
+.content-nav-top {
     margin-bottom: 18px;
+    text-transform: uppercase;
 
     a {
         color: #ffffff;
-        font-family: "Times New Roman", Times, serif;
-        font-weight: bold;
+        font: bold 12px "Times New Roman", Times, serif;
         padding: 0 42px 0 26px;
         border-right: 1px solid #c59e52;
+        text-decoration: none;
 
         &:last-child {
             border-right: none;
@@ -128,40 +118,35 @@ select {
 }
 
 .article {
+    color: #ffffff;
+    font: 12px Tahoma, Arial, sans-serif;
+
     img {
         float: left;
-        padding-right: 13px;
+        margin-right: 13px;
     }
 
     p {
-        font-size: 12px;
         color: #cccccc;
-        padding-bottom: 15px;
+        margin-bottom: 15px;
     }
 }
 
-/*---------------- Page-footer */
-
-.page-footer {
-    background-color: white;
-    padding: 3px 10px 0 20px;
-    border-top: #0f0900;
+.content-nav-bottom {
+    background: #0f0900;
+    padding: 14px 0;
+    border-top: 1px solid blue;
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
+    text-align: center;
+    font: 12px "Times New Roman", Times, serif;
 
     a {
         color: #c59e52;
         padding: 0 3px;
         border-right: 1px solid #d08900;
-        float: left;
-        font-family: "Times New Roman", Times, serif;
-
-        &::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
 
         &:last-child {
             border-right: none;
@@ -169,31 +154,24 @@ select {
     }
 }
 
-/*--------------------------------------------------- Footer */
+/* ------------------------------------------------------ Footer */
 
 .footer {
-    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000;
     border-top: 1px solid #6a4101;
-    margin-bottom: 24px;
     height: 30px;
-    color: white;
-    font-size: 10px;
-    font-family: "Times New Roman", Times, serif;
+    color: #fff;
     padding: 9px 20px 0 30px;
-}
 
-.nav-3 {
-    float: right;
+    .nav {
+        float: right;
 
-    &::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-
-    a {
-        color: white;
-        font-size: 10px;
-        padding-right: 16px;
+        a {
+            color: #fff;
+            margin-right: 16px;
+        }
     }
 }
